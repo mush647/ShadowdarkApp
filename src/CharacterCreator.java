@@ -172,9 +172,9 @@ public class CharacterCreator {
         for (int i = 0; i < races.length; i++) {
             System.out.println("   " + (i+1) + " - " + races[i].getRussianName());
         }
-        System.out.println("   7 - Я хочу узнать о расах больше;");
-        System.out.println("   8 - Выбрать случайно;");
-        System.out.println("   0 - выход из создания персонажа.");
+        System.out.println("   7 - Я хочу узнать о расах больше");
+        System.out.println("   8 - Выбрать случайно");
+        System.out.println("   0 - выход из создания персонажа");
     }
 
     private static int getIntInput(Scanner console, int min, int max) {
