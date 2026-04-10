@@ -1,3 +1,5 @@
+package main.java.com.shadowdark.model;
+
 public enum Ancestry {
     DWARF("Дварф", new String[]{"Всеобщий", "Дварфский"}, 2, true, false, false, false, false, false,
             "Храбрый и стойкий народ, такой же крепкий, как каменные королевства, которые они высекают внутри гор."),

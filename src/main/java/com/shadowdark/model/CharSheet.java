@@ -1,3 +1,5 @@
+package main.java.com.shadowdark.model;
+
 import java.util.EnumMap;
 import java.util.Map;
 

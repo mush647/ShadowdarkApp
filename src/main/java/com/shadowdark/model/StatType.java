@@ -1,3 +1,4 @@
+package main.java.com.shadowdark.model;
 public enum StatType {
     STRENGTH("Сила"),
     DEXTERITY("Ловкость"),
