@@ -7,7 +7,7 @@ import main.java.com.shadowdark.ui.MessageBundle; // тут живёт вся н
 public class Main {
     public static void main(String[] args) {
 
-        MessageBundle msg = new MessageBundle("ru"); // передаём в конструктор тэг русской локали, создаём объект MessageBundle под
+        MessageBundle msg = new MessageBundle("en"); // передаём в конструктор тэг русской локали, создаём объект MessageBundle под
                                                                  // названием msg, именно его мы будем использовать для вызова методов.
         ConsoleUI ui = new ConsoleUI(msg);  // передаём в конструктор нашей консоли объект МессаджБандл, создаём объект ConsoleUI,
                                             // через него будут идти все методы вызова консоли. Он отвечает за ввод и вывод в консоль.

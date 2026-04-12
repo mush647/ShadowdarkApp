@@ -1,19 +1,19 @@
 package main.java.com.shadowdark.model;
 public enum StatType {
-    STRENGTH("Сила"),
-    DEXTERITY("Ловкость"),
-    CONSTITUTION("Телосложение"),
-    INTELLECT("Интеллект"),
-    WISDOM("Мудрость"),
-    CHARISMA("Харизма");
+    STRENGTH("strength"),
+    DEXTERITY("dexterity"),
+    CONSTITUTION("constitution"),
+    INTELLECT("intelligence"),
+    WISDOM("wisdom"),
+    CHARISMA("charisma");
 
-    private final String russianName;
+    private final String statName;
 
-    StatType(String russianName) {
-        this.russianName = russianName;
+    StatType(String statName) {
+        this.statName = statName;
     }
 
-    public String getRussianName() {
-        return russianName;
+    public String getStatName() {
+        return statName;
     }
 }

@@ -2,12 +2,12 @@ package main.java.com.shadowdark.model;
 
 
 public enum Ancestry {
-    DWARF("DWARF", new String[]{"Всеобщий", "Дварфский"}, 2, true, false, false, false, false, false),
-    ELF("ELF", new String[]{"Всеобщий", "Эльфийский", "Сильванский"}, 0, false, true, false, false, false, false),
-    GOBLIN("GOBLIN", new String[]{"Всеобщий", "Гоблинский"}, 0, false, false, true, false, false, false),
-    HALF_ORC("HALF_ORC", new String[]{"Всеобщий", "Орочий"}, 0, false, false, false, true, false, false),
-    HALFLING("HALFLING", new String[]{"Всеобщий"}, 0, false, false, false, false, true, false),
-    HUMAN("HUMAN", new String[]{"Всеобщий", "Один дополнительный язык"}, 0, false, false, false, false, false, true);
+    DWARF("DWARF", new String[]{"common", "dwarvish"}, 2, true, false, false, false, false, false),
+    ELF("ELF", new String[]{"common", "elvish", "sylvan"}, 0, false, true, false, false, false, false),
+    GOBLIN("GOBLIN", new String[]{"common", "goblin"}, 0, false, false, true, false, false, false),
+    HALF_ORC("HALF_ORC", new String[]{"common", "orcish"}, 0, false, false, false, true, false, false),
+    HALFLING("HALFLING", new String[]{"common"}, 0, false, false, false, false, true, false),
+    HUMAN("HUMAN", new String[]{"common", "bonus_common"}, 0, false, false, false, false, false, true);
 
     private final String ancestryName;
     private final String[] languages;

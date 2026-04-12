@@ -24,7 +24,7 @@ public class StatsGenerator {
         Map<StatType, Integer> map = new EnumMap<>(StatType.class);
         ui.println("please_make_stat_input", MIN_STAT, MAX_STAT); //"no_high_stat", statsGenerator.getHighStatThreshold()
         for (StatType type : StatType.values()) {
-            System.out.print(type.getRussianName() + ": ");
+            System.out.print(ui.msg().get("stat_" + type.getStatName()) + ": ");
             int value = ui.readInt(MIN_STAT, MAX_STAT);
             map.put(type, value);
         }
@@ -41,7 +41,7 @@ public class StatsGenerator {
         }
         ui.println("generated_stats");
         for (StatType type : StatType.values()) {
-            System.out.println(type.getRussianName() + ": " + map.get(type));
+            System.out.println(ui.msg().get("stat_" + type.getStatName()) + ": " + map.get(type));
         }
         return map;
     }

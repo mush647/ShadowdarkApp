@@ -2,6 +2,7 @@ package main.java.com.shadowdark.model;
 
 import java.util.EnumMap;
 import java.util.Map;
+import main.java.com.shadowdark.ui.ConsoleUI;
 
 public class CharSheet {
     // Константы для характеристик
@@ -18,6 +19,8 @@ public class CharSheet {
     private String alignment;
     private String background;
     private String deity;
+
+    private ConsoleUI ui;
 
     // Хранилище характеристик: теперь используется EnumMap
     private final Map<StatType, Integer> stats = new EnumMap<>(StatType.class);
@@ -50,7 +53,7 @@ public class CharSheet {
             }
             if (val < MIN_STAT || val > MAX_STAT) {
                 throw new IllegalArgumentException(
-                        type.getRussianName() + " должно быть от " + MIN_STAT + " до " + MAX_STAT);
+                        ui.msg().get("stat_" + type.getStatName()) + " должно быть от " + MIN_STAT + " до " + MAX_STAT);
             }
             stats.put(type, val);
         }
@@ -96,7 +99,7 @@ public class CharSheet {
     private void setStat(StatType type, int value) {
         if (value < MIN_STAT || value > MAX_STAT) {
             throw new IllegalArgumentException(
-                    type.getRussianName() + " должно быть от " + MIN_STAT + " до " + MAX_STAT);
+                    ui.msg().get("stat_" + type.getStatName()) + " должно быть от " + MIN_STAT + " до " + MAX_STAT);
         }
         stats.put(type, value);
     }

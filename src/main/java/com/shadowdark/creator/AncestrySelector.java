@@ -47,7 +47,13 @@ public class AncestrySelector {
         Ancestry a = getAncestryByNumber(num);
         System.out.println("\n=== " + ui.msg().get("ancestry_" + a.getAncestryName().toLowerCase() + "_name") + " ===");
         System.out.println(ui.msg().get("ancestry_" + a.getAncestryName().toLowerCase() + "_desc"));
-        System.out.println(ui.msg().get("ancestry_languages") + String.join(", ", a.getLanguages()));
+        String[] langCodes = a.getLanguages();
+        String[] langNames = new String[langCodes.length];
+        for (int i = 0; i < langCodes.length; i++) {
+            langNames[i] = ui.msg().get("language_" + langCodes[i]);
+        }
+        String languagesStr = String.join(", ", langNames);
+        System.out.println(ui.msg().get("ancestry_languages") + languagesStr);
         if (a.isStout()) ui.println("ancestry_stout", a.getBonusHp());
         if (a.hasKeenSenses()) ui.println("ancestry_keenSenses");
         if (a.isMighty()) ui.println("ancestry_mighty");

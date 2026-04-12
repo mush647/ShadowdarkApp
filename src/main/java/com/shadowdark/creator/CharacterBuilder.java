@@ -51,7 +51,7 @@ public class CharacterBuilder {
         for (StatType type : StatType.values()) {
             int val = character.getStat(type);
             int mod = character.getModifier(type);
-            System.out.println(type.getRussianName() + ": " + val + ", модификатор: " + mod);
+            System.out.println(type.getStatName() + ": " + val + ", модификатор: " + mod);
         }
         ui.waitForEnter();
 
