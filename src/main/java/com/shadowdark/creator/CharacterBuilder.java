@@ -59,7 +59,7 @@ public class CharacterBuilder {
         if (ancestry == null) return null;
         character.setAncestry(ancestry);
         //character.recalculateMaxHp(); // нужно реализовать этот метод в CharSheet
-        ui.println("ancestry_chosen", ancestry.getRussianName());
+        ui.println("ancestry_chosen", ui.msg().get("ancestry_" + ancestry.getAncestryName().toLowerCase() + "_name"));
 
         return character;
     }

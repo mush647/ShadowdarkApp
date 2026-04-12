@@ -142,21 +142,21 @@ public class CharSheet {
 
     // Есть ли преимущество при броске ОЗ за уровень
     public boolean hasAdvantageOnHitDice() {
-        return ancestry != null && ancestry.hasAdvantageOnHp();
+        return ancestry != null && ancestry.isStout();
     }
 
     // +1 к дальним атакам или магии
     public boolean hasRangedOrMagicBonus() {
-        return ancestry != null && ancestry.hasRangedOrMagicBonus();
+        return ancestry != null && ancestry.hasFarsight();
     }
 
     // Нельзя застать врасплох
     public boolean cannotBeSurprised() {
-        return ancestry != null && ancestry.cannotBeSurprised();
+        return ancestry != null && ancestry.hasKeenSenses();
     }
 
     // +1 к рукопашным атакам и урону
     public boolean hasMeleeBonus() {
-        return ancestry != null && ancestry.hasMeleeBonus();
+        return ancestry != null && ancestry.isMighty();
     }
 }
