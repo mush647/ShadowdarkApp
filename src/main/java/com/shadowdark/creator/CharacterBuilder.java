@@ -23,9 +23,9 @@ public class CharacterBuilder {
         while (true) {
             // выбор режима
             ui.println("choose_mode");
-            System.out.println("   " + ui.msg().get("manual_mode"));//ui.println("manual_mode");
-            System.out.println("   " + ui.msg().get("random_mode"));//ui.println("random_mode");
-            System.out.println("   " + ui.msg().get("exit"));//ui.println("exit");
+            System.out.println("   1 - " + ui.msg().get("manual_mode"));//ui.println("manual_mode");
+            System.out.println("   2 - " + ui.msg().get("random_mode"));//ui.println("random_mode");
+            System.out.println("   0 - " + ui.msg().get("exit"));
             int mode = ui.readInt(0, 2);
             if (mode == 0) {
                 ui.println("exit_program");
@@ -51,7 +51,7 @@ public class CharacterBuilder {
         for (StatType type : StatType.values()) {
             int val = character.getStat(type);
             int mod = character.getModifier(type);
-            System.out.println(type.getStatName() + ": " + val + ", модификатор: " + mod);
+            System.out.println(ui.msg().get( "stat_" + type.getStatName()) + ": " + val + ", " + ui.msg().get("stat_modifier") + ": " + mod);
         }
         ui.waitForEnter();
 
